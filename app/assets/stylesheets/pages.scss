@@ -1,3 +1,45 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #DFE1E8;
+}
+.layout {
+  display: flex;
+}
+
+.left-side-nav {
+  width: 15%;
+  height: 100vh;
+  background-color: #252B3B;
+}
+
+.right-side-nav {
+  width: 85%; 
+  height: 100vh;
+}
+
+.top-navbar {
+  height: 70px;
+  background: #1DA5DB;
+}
+
+.banner {
+  height: 300px;
+  background-color: lightslategrey;
+}
+
+.home_container {
+ display: flex;
+ height: 100vh;
+}
+
+.home-middle-content {
+  width: 75%;
+}
+
+.home-right-content {
+  width: 25%;
+  background: green;
+}
