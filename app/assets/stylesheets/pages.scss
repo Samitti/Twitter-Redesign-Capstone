@@ -11,18 +11,17 @@ body {
 
 .left-side-nav {
   width: 15%;
-  height: 100vh;
   background-color: #252B3B;
 }
 
 .right-side-nav {
-  width: 85%; 
-  height: 100vh;
+  width: 85%;
+
 }
 
 .top-navbar {
   height: 70px;
-  background: #1DA5DB;
+  background: #24a6da;
 }
 
 .banner {
@@ -32,7 +31,6 @@ body {
 
 .home_container {
  display: flex;
- height: 100vh;
 }
 
 .home-middle-content {
@@ -41,5 +39,4 @@ body {
 
 .home-right-content {
   width: 25%;
-  background: green;
 }
