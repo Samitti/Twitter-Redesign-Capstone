@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'pages#index'
+  resources :sessions  
   resources :users
   get '/index' => 'pages#index'
   get '/home' => 'pages#home'

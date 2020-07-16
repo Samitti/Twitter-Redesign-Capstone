@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     @user.photo ||= "/public/profile_image.jpg"
     @user.cover_image ||= "/public/cover_image.jpg"
     if @user.save
+      session[:user_id] = @user.id
       redirect_to home_path, notice: "Welcome Successfuly Signed In."
     else 
       render 'new'
