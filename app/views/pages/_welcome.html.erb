@@ -1,11 +1,22 @@
-<div class="container">
-<h1> Welcome </h1>
+  <div class="container-index row">
+    <div class="col-7">  
+      <h1 class="text"> Welcome to Twitter </h1>
+        <p class="text">
+        Hi welcome to twitter. It seems like there’s not a lot to show</br> 
+         you right now, but you can see trends for other areas. </br> 
+        </p>
+        <h3 class='text'>
+          <%= link_to 'Sign In', new_session_path, class: 'text' %> |
+          <%= link_to 'Sign Up', new_user_path, class: 'text' %>
+        </h3>
+        
+        
+    </div>
 
-<%= link_to 'Sign In', new_session_path %>
-<%= link_to 'Sign Up', new_user_path %>
+    <div class="container col-5">     
+      
 
-<%= yield %>
-</div>
+      <%= yield %>
+      </div>       
 
-
-
+    </div>

@@ -1,11 +1,11 @@
-<div class="container">
-  <h1 class="text-center">Sign In</h1>
+<div class="container signin_form">
+  <h1 class="text">Sign In</h1>
 
 <%= form_tag sessions_path do %>
-  <fieldset>
-    <p  class="form-group row">
-      <%= label_tag :username%>
-      <%= text_field_tag :username, nil, autofocus: true, class: "form-control"  %>
+  <fieldset class="form-group text">
+    <p >
+      <%= label_tag :username%></br>
+      <%= text_field_tag :username, nil, autofocus: true %>
     </p>
 
     <p>
