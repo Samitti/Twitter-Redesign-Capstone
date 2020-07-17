@@ -1,6 +1,40 @@
 <div class="layout">
   <div class="left-side-nav">
-    Hello 
+    <div class="user_detail">
+      <div class="row text-secondary">
+        <div class="user_image_name d-flex pl-3">
+          <img src="profile_image.jpg" class="profile_image">     
+          <%= current_user.full_name %>
+        </div> 
+      </div> 
+      <div class="row text-secondary pl-2 pr-4 mt-2">
+        <div class="col-6 user_following text-center">      
+          <span>182</span> 
+          <span>Folowing</span> 
+        </div> 
+        <div class="col-6 user_followers text-center">      
+          <span>122</span> 
+          <span>Followers</span>
+        </div> 
+      </div>      
+    </div>
+    <div class="side-nav">
+      <ul>
+        <li>
+          <i class="fas fa-home"></i>
+          <a class="nav-link" href="/home">HOME </a>
+        </li>
+        <li>
+
+          <i class="fas fa-user-circle"></i>
+          <a class="nav-link" href="/profile">PROFILE</a>
+        </li>
+        <li>
+          <a class="nav-link"><%= link_to 'LOG OUT', session_path('active'), method: :delete %></a>          
+        </li>   
+        
+      </ul>
+    </div>
   </div>
   <div class="right-side-nav"> 
     <div>

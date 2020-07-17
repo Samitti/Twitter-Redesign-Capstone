@@ -1,16 +1,26 @@
 
+    <div class="midle-nav">
     <%= render 'navbar_home' %>
-    
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-    <h1>Pages#home</h1>  <p>Find me in app/views/pages/home.html.erb</p>
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-    <h1>Pages#home</h1>
-  
+    </div>
+    <div class="container mt-3">
+        <div class="card card-post mb-2 card-pos">
+            <div class="card-body">
+            <p class="text-secondary">TWEET SOMETHING</p> 
+            <div class="input-group mb-1"> 
+                <input type="text" class="form-control"> 
+                <div class="input-group-prepend">
+                <span class="input-group-text">TWEET</span>
+                </div>     
+            </div>
+            </div>
+        </div>
+        <p>
+        <% for p in @posts do %>
+            <div class="card card-post">
+            <div class="card-body">
+                <p><%= p.content %></p>
+            </div>    
+            </div>
+        <% end %>      
+        </p>
+    </div>

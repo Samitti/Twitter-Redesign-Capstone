@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   resources :sessions  
   resources :users
+  resources :posts 
   get '/index' => 'pages#index'
   get '/home' => 'pages#home'
   get '/profile' => 'pages#profile'

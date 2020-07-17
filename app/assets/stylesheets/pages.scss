@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background-color: #DFE1E8;
+  background-color: #f7f7f8
 }
 .layout {
   display: flex;
@@ -26,7 +26,7 @@ body {
 
 .banner {
   height: 300px;
-  background-color: lightslategrey;
+  background-color: rgb(197, 197, 197);
 }
 
 .home_container {
@@ -35,6 +35,8 @@ body {
 
 .home-middle-content {
   width: 75%;
+  border-right: solid 1px rgb(224, 222, 222);
+
 }
 
 .home-right-content {
@@ -54,4 +56,50 @@ h1{
 
 .text {
   color: #24a6da;
+}
+
+.user_detail {
+  height: 130px;
+}
+
+.top-logo {
+  padding-top: 20px;
+  padding-left: 30px;  
+}
+
+.top-logo i {
+  font-size: 30px;
+  color: white;
+}
+
+.social-links {
+  color: rgb(75, 73, 73);
+  font-size: 25px; 
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.social-links i {
+  margin-left: 50px;
+}
+
+.card-post {
+  border: none;
+}
+
+.midle-nav {
+  border-bottom: solid 1px rgb(224, 222, 222);
+}
+
+.user_image_name {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  height: 40px;
+}
+
+.profile_image {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
 }
