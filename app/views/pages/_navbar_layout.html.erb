@@ -2,38 +2,34 @@
   <div class="left-side-nav">
     <div class="user_detail">
       <div class="row text-secondary">
-        <div class="user_image_name d-flex pl-3">
+        <div class="user_image_name d-flex pl-3 align-items-center">
           <img src="profile_image.jpg" class="profile_image">     
           <%= current_user.full_name %>
         </div> 
       </div> 
-      <div class="row text-secondary pl-2 pr-4 mt-2">
-        <div class="col-6 user_following text-center">      
-          <span>182</span> 
+      <div class="row text-secondary">
+        <div class="user_following text-center">      
+          <span class="large-font d-block">1</span> 
           <span>Folowing</span> 
         </div> 
-        <div class="col-6 user_followers text-center">      
-          <span>122</span> 
+        <div class="user_followers text-center">      
+          <span class="large-font d-block">1</span> 
           <span>Followers</span>
         </div> 
       </div>      
     </div>
-    <div class="side-nav">
-      <ul>
-        <li>
+    <div class="text-secondary">      
+        <div class="side-nav d-flex align-items-center pl-3">
           <i class="fas fa-home"></i>
-          <a class="nav-link" href="/home">HOME </a>
-        </li>
-        <li>
-
+          <a class="nav-link nav-link-col" href="/home">HOME </a>
+        </div>
+        <div class="side-nav d-flex align-items-center pl-3">
           <i class="fas fa-user-circle"></i>
-          <a class="nav-link" href="/profile">PROFILE</a>
-        </li>
-        <li>
-          <a class="nav-link"><%= link_to 'LOG OUT', session_path('active'), method: :delete %></a>          
-        </li>   
-        
-      </ul>
+          <a class="nav-link nav-link-col" href="/profile">PROFILE</a>
+        </div>
+        <div class="side-nav align-items-center">
+          <%= link_to 'LOG OUT', session_path('active'), method: :delete, class: 'nav-link-col side-nav-last' %>        
+        </div> 
     </div>
   </div>
   <div class="right-side-nav"> 
@@ -41,12 +37,7 @@
       <%= render '/pages/top_navbar' %>
     </div>
     <div class="home_container">
-      <div class="home-middle-content">
-        <%= yield %>
-      </div>
-      <div class="home-right-content">
-        Right side        
-    </div>
+      <%= yield %>      
     </div>
   </div>
 </div>

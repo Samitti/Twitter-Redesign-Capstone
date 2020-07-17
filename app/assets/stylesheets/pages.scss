@@ -103,3 +103,39 @@ h1{
   width: 40px;
   margin-right: 10px;
 }
+
+.user_following, 
+.user_followers {
+  border: solid 1px rgb(32, 32, 32);
+  font-size: small;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  width: 50%
+}
+
+.large-font {
+  font-size: large;
+  color: #f7f7f8;
+}
+
+.nav-link-col {
+  color: #9b9b9b;
+}
+
+.side-nav a {
+  width: 167px;
+}
+.side-nav-last {
+  width: 200px;
+  padding-right: 80px;
+  padding-left: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.nav-link-col:hover,
+.side-nav:hover {
+  background-color: #24a6da;
+  color: white;
+  text-decoration: none;
+}

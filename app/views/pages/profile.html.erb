@@ -1,34 +1,41 @@
-
+<div class="home-middle-content">
     <div class="banner">
-      This is Banner
+    This is Banner
     </div>
     <div class="midle-nav">
-      <%= render 'navbar_user' %>        
+    <%= render 'navbar_user' %>        
     </div>
     <div class="ml-5">
-        <span class="notice"><%= notice %></span>
-        <span class="alert"><%= alert %></span>
-        </div>
+      <span class="notice"><%= notice %></span>
+      <span class="alert"><%= alert %></span>
+    </div>
     <div class="container">
-      <div class="card  card-post mb-2">
-        <div class="card-body">
-        <%= form_for(@newPost) do |f| %>
-          <p class="text-secondary">TWEET SOMETHING</p> 
-          <div class="input-group mb-1"> 
-            <%= f.text_field :content, autofocus: true, class: "form-control" %>
-            <%= f.submit "Add Tweet" %>                 
-          </div>
-          <% end %>
+    <div class="card  card-post mb-2">
+      <div class="card-body">
+      <%= form_for(@newPost) do |f| %>
+        <p class="text-secondary">TWEET SOMETHING</p> 
+        <div class="input-group mb-1"> 
+          <%= f.text_field :content, autofocus: true, class: "form-control" %>
+          <%= f.submit "Add Tweet" %>                 
         </div>
+        <% end %>
       </div>
-      <p>
-        <% for p in @posts do %>
-          <div class="card card-post">
-            <div class="card-body">
-              <p><%= p.content %></p>
-            </div>    
-          </div>
-        <% end %>      
-      </p>
-    </div>  
+    </div>
+    <p>
+      <% for p in @posts do %>
+        <div class="card card-post">
+          <div class="card-body">
+            <p><%= p.content %></p>
+          </div>    
+        </div>
+      <% end %>      
+    </p>
+    </div> 
+</div>
+
+<div class="home-right-content">
+    Right side        
+</div>
+
+    
 
