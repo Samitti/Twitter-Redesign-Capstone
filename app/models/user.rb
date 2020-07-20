@@ -4,4 +4,6 @@ class User < ApplicationRecord
   validates :full_name, presence: true
 
   has_many :posts
+  has_one_attached :photo
+  has_one_attached :cover_image
 end

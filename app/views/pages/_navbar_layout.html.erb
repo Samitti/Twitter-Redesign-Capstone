@@ -3,8 +3,13 @@
     <div class="user_detail">
       <div class="row text-secondary">
         <div class="user_image_name d-flex pl-3 align-items-center">
-          <img src="profile_image.jpg" class="profile_image">     
+          <% if  current_user.photo.attached? %>
+            <img src="<%= (url_for(current_user.photo)) %>" class="profile_image">                       
+          <% else %>
+            <img src="avatar.jpg" class="profile_image"> 
+          <% end %>  
           <%= current_user.full_name %>
+          
         </div> 
       </div> 
       <div class="row text-secondary">

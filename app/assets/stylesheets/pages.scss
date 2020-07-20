@@ -29,6 +29,12 @@ body {
   background-color: rgb(197, 197, 197);
 }
 
+.cover_image {
+  width: 100%;
+  height: 300px;
+
+}
+
 .home_container {
  display: flex;
 }
@@ -127,10 +133,18 @@ h1{
 }
 .side-nav-last {
   width: 200px;
-  padding-right: 80px;
-  padding-left: 45px;
+  padding-right: 82px;
+  padding-left: 47px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.who-to-follow {
+  height: 57px;
+  margin-left: 25px;
+  margin-right: 25px;
+  color: rgb(224, 222, 222);
+  border-bottom: solid 1px rgb(224, 222, 222);
 }
 
 .nav-link-col:hover,

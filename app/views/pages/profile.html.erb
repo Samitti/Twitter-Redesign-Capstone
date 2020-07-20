@@ -1,6 +1,10 @@
 <div class="home-middle-content">
     <div class="banner">
-    This is Banner
+      <% if  current_user.photo.attached? %>
+        <img src="<%= (url_for(current_user.cover_image)) %>" class="cover_image">                       
+      <% else %>
+        <img src="cover_image.jpg" class="cover_image"> 
+      <% end %>  
     </div>
     <div class="midle-nav">
     <%= render 'navbar_user' %>        
