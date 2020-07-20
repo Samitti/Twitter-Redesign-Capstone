@@ -80,7 +80,7 @@ h1{
 
 .social-links {
   color: rgb(75, 73, 73);
-  font-size: 25px; 
+  font-size: 20px; 
   margin-top: 20px;
   margin-right: 20px;
 }
@@ -109,6 +109,41 @@ h1{
   width: 40px;
   margin-right: 10px;
   border-radius: 50%;
+}
+
+.profile_image_large {
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.profile_large_image_name {
+  height: 300px;
+}
+
+.profile_large_image {
+  height: 230px;
+}
+
+.profile_numbers {
+  border: solid 1px rgb(224, 222, 222);
+  height: 70px;
+}
+
+.profile_numbers_item {
+  border-right: solid 1px rgb(224, 222, 222);
+  font-size: small;
+  margin-top: 10px;
+}
+
+.profile_numbers_item large-font {
+  font-size: x-large;
+}
+
+.followed_by {
+  height: 57px;
+  border-bottom: solid 1px rgb(224, 222, 222);;
 }
 
 .user_following, 

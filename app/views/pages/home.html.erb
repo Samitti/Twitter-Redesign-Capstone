@@ -36,14 +36,14 @@
         <p class="mr-5"> WHO TO FOLLOW </p> <i class="fas fa-sync ml-4 mt-1 text-secondary"></i>
       </div> 
         <div>       
-        <% for p in @users do %>
+        <% for user in @users do %>
             <div class="user_image_name d-flex pl-3 align-items-center">
-                <% if  p.photo.attached? %>
-                    <img src="<%= (url_for(p.photo)) %>" class="profile_image">                       
+                <% if  user.photo.attached? %>
+                    <img src="<%= (url_for(user.photo)) %>" class="profile_image">                       
                 <% else %>
                     <img src="avatar.jpg" class="profile_image"> 
                 <% end %>  
-                <%= link_to p.full_name, profile_path %>          
+                <%= link_to user.full_name, profile_path(id: user.id) %>          
             </div>             
           <% end %>
         </div> 
