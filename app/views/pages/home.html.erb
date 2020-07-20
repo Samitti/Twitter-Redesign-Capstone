@@ -34,6 +34,18 @@
     <div class="home-right-content">
       <div class="text-secondary pt-3 who-to-follow d-flex">
         <p class="mr-5"> WHO TO FOLLOW </p> <i class="fas fa-sync ml-4 mt-1 text-secondary"></i>
-      </div>                
+      </div> 
+        <div>       
+        <% for p in @users do %>
+            <div class="user_image_name d-flex pl-3 align-items-center">
+                <% if  p.photo.attached? %>
+                    <img src="<%= (url_for(p.photo)) %>" class="profile_image">                       
+                <% else %>
+                    <img src="avatar.jpg" class="profile_image"> 
+                <% end %>  
+                <%= link_to p.full_name, profile_path %>          
+            </div>             
+          <% end %>
+        </div> 
     </div>
     

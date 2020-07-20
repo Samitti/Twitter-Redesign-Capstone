@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  root 'pages#index'
-  resources :sessions  
+  root 'pages#index'   
   resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :sessions 
   resources :posts 
   get '/index' => 'pages#index'
   get '/home' => 'pages#home'

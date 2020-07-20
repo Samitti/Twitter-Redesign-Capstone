@@ -12,9 +12,9 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
     respond_to do |f|
       if (@post.save)
-        f.html { redirect_to profile_path, notice: "Post Created" }
+        f.html { redirect_to home_path, notice: "Post Created" }
       else
-        f.html { redirect_to profile_path, notice: @post.errors.full_messages }
+        f.html { redirect_to home_path, notice: @post.errors.full_messages }
       end
     end
   end
