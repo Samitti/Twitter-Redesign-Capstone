@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       redirect_to home_path, notice:
-      "Welcome #{:username}, you successfully Signed In!"
+      "Welcome #{params[:username]}, you successfully Signed In!"
     else
       render 'new', alert:
       "User Name Invalid!"
