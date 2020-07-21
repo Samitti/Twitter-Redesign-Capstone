@@ -1,4 +1,8 @@
 class SessionsController < ApplicationController
+  before_action :sign_in, except: %i[new create]
+  def index
+  end
+
   def show
   end
 

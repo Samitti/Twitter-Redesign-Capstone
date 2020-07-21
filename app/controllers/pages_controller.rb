@@ -1,11 +1,13 @@
 class PagesController < ApplicationController
+  before_action :sign_in, except: %i[index]
+
   def index
   end
 
   def home
     @posts= Post.all
     @newPost = Post.new
-    @users = User.all
+    @notFollowing = User.all - current_user.following
   end
 
   def profile
