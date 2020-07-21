@@ -1,0 +1,11 @@
+<% if current_user.id != @user.id %>
+  <div class="col-12">
+    <div class"card">
+      <% if !current_user.following?(@user) %>
+        <%= link_to 'Follow', followings_path(id: @user), method: :post, class: 'btn btn-success' %>
+      <% else %>
+        <%= link_to 'Unfollow', following_path(id: @user.id), method: :delete, class: 'btn btn-secondary' %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

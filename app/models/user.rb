@@ -23,7 +23,7 @@ class User < ApplicationRecord
   end
 
   #is following a user
-  def Following?(someone)
+  def following?(someone)
     following.include?(someone)
   end
 end

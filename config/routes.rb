@@ -7,7 +7,8 @@ Rails.application.routes.draw do
     end
   end
   resources :sessions 
-  resources :posts 
+  resources :posts
+  resources :followings 
   get '/index' => 'pages#index'
   get '/home' => 'pages#home'
   get '/profile' => 'pages#profile'

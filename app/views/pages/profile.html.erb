@@ -46,7 +46,10 @@
             <img src="avatar.jpg" class="profile_image_large"> 
         <% end %>  
         <p class="mt-3"><%= @user.full_name.upcase %>  </p>
-    </div> 
+        <div>
+          <%= render 'components/follow_button' %>
+        </div>
+    </div>     
     <div class="profile_numbers d-flex">
           <div class="profile_numbers_item text-center flex-fill text-secondary">      
             <span class="large-font d-block text-dark"><%= @user.posts.count %></span> 
