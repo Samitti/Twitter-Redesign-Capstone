@@ -1,7 +1,4 @@
 class User < ApplicationRecord
-  validates_uniqueness_of :username
-  validates :username, presence: true
-  validates :full_name, presence: true
 
   has_many :posts, dependent: :destroy
 
@@ -15,6 +12,10 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_relationships, source: :follower
 
   default_scope -> { order(created_at: :desc) }
+
+  validates_uniqueness_of :username
+  validates :username, presence: true
+  validates :full_name, presence: true
 
   # helper methods
   def follow(someone)

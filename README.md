@@ -1,4 +1,4 @@
-# Private Events
+# Twitter-Redesin 
   This is part of the Microverse RoR course capstone project. In this project, I was given a template to redesign the twitter web page. The project is required to have a similar look on the color, style, and basic functionality. In this app you can:
   - create an account and log in. Once you are logged in you can tweet and see other users tweet also. 
   - You can follow any user, and the user can follow you.
@@ -22,12 +22,13 @@ To get a local copy up and running follow these simple example steps.
 
 - Open a terminal or command prompt interface on your machine
 - Clone the project unto your local machine: `git clone https://github.com/Samitti/Twitter-Redesign-Capstone.git`
-- From your terminal enter the project directory using `cd private-events` 
+- From your terminal enter the project directory using `cd Twitter-Redesign-Capstone` 
 
 # Instructions
 
+- Run ` bundle install ` to install all the gems required for the app
 - Run ` rails db:migrate ` to have the database tables created and setup on your locoal machine.
-- Run `rails db:seed` to create some users an an event for you to test out the app
+- Run `rails db:seed` to create some users and tweets for you to test out the app
 - Run ` rails server ` or ` rails s ` on your terminal to start the integrated ruby server.
 - Open your web browser and go to ` localhost:3000 `, to see that the rails sever is up and running.
 - Enjoy the app.
