@@ -1,4 +1,4 @@
-# Twitter-Redesin 
+# Twitter-Redesign 
   This is part of the Microverse RoR course capstone project. In this project, I was given a template to redesign the twitter web page. The project is required to have a similar look on the color, style, and basic functionality. In this app you can:
   - create an account and log in. Once you are logged in you can tweet and see other users tweet also. 
   - You can follow any user, and the user can follow you.
