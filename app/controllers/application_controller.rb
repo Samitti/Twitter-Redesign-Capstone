@@ -3,6 +3,11 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, notice: 'Please sign in first' unless current_user
   end
 
+  def loged_in
+    return if current_user 
+  end
+  
+
   private
 
   def current_user
