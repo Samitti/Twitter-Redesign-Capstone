@@ -4,9 +4,8 @@ class ApplicationController < ActionController::Base
   end
 
   def loged_in
-    return if current_user 
+    return if current_user
   end
-  
 
   private
 
