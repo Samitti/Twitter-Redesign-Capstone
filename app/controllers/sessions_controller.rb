@@ -1,13 +1,10 @@
 class SessionsController < ApplicationController
   before_action :sign_in, except: %i[new create]
-  def index
-  end
+  def index; end
 
-  def show
-  end
+  def show; end
 
-  def new
-  end
+  def new; end
 
   def create
     user = User.find_by_username(params[:username])
@@ -17,12 +14,12 @@ class SessionsController < ApplicationController
       "Welcome #{params[:username]}, you successfully Signed In!"
     else
       render 'new', alert:
-      "User Name Invalid!"
+      'User Name Invalid!'
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_path, notice: "You signed out"
+    redirect_to root_path, notice: 'You signed out'
   end
 end

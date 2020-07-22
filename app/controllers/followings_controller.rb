@@ -1,6 +1,4 @@
 class FollowingsController < ApplicationController
-
-  
   def create
     @following = current_user.active_relationships.build(followed_id: params[:id])
     @following.save
@@ -8,8 +6,7 @@ class FollowingsController < ApplicationController
   end
 
   def destroy
-    user = current_user.active_relationships.find_by(params[:id]).destroy
-    profile_path(id: params[:id])
+    current_user.active_relationships.find_by(params[:id]).destroy
     redirect_to request.referrer
   end
 end
