@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
+  resources :likes
   resources :sessions 
   resources :posts
   resources :followings 

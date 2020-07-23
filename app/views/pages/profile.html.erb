@@ -41,7 +41,11 @@
                       <p><%= User.find(p.user_id).full_name %></p>
                       <p class="text-secondary"><%= p.created_at.to_formatted_s(:short) %></p>
                   </div> 
-                  <p class="text-secondary"><%= p.content %></p>                        
+                  <p class="text-secondary"><%= p.content %></p>
+                  <div class="d-flex justify-content-end align-items-center"> 
+                    <span class="mr-2"> <%=  p.likes.count %> </span>
+                    <%= link_to '', likes_path(post_id: p.id), method: :post, class: 'fas fa-heart like_btn text-secondary' %> 
+                  </div>                     
               </div>                     
           </div>    
       </div>
