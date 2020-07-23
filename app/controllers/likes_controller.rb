@@ -8,5 +8,4 @@ class LikesController < ApplicationController
       redirect_to request.referrer, alert: 'You can only like a tweet once.'
     end
   end
-  
 end

@@ -9,5 +9,4 @@ class FollowingsController < ApplicationController
     current_user.active_relationships.find_by(params[:id]).destroy
     redirect_to request.referrer
   end
-  
 end

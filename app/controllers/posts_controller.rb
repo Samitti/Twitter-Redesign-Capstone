@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
   before_action :sign_in
 
-  def index
-  end
+  def index; end
 
   def new
     @posts = Posts.new
