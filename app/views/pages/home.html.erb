@@ -24,15 +24,15 @@
                 <div class="card card-post">
                     <div class="card-body d-flex">
                         <div class="tweet_avatar mr-3"> 
-                            <% if  User.find(p.user_id).photo.attached? %>
-                                <img src="<%= (url_for(User.find(p.user_id).photo)) %>" class="profile_image">                       
+                            <% if  p.user.photo.attached? %>
+                                <img src="<%= (url_for(p.user.photo)) %>" class="profile_image">                       
                             <% else %>
                                 <img src="avatar.jpg" class="profile_image"> 
                             <% end %>                                         
                         </div> 
                         <div class="tweet_content">
                             <div  class="d-flex justify-content-between">                             
-                                <p><%= link_to User.find(p.user_id).full_name, profile_path(id: p.user_id), class: 'text-dark' %></p>
+                                <p><%= link_to p.user.full_name, profile_path(id: p.user_id), class: 'text-dark' %></p>
                                 <p class="text-secondary"><%= p.created_at.to_formatted_s(:short) %></p>
                             </div> 
                             <p class="text-secondary"><%= p.content %></p>

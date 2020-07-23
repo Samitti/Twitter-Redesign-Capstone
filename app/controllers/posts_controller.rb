@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   before_action :sign_in
 
   def index
-    @posts = Posts.all
   end
 
   def new
