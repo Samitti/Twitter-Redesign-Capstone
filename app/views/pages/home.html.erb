@@ -31,8 +31,8 @@
                             <% end %>                                         
                         </div> 
                         <div class="tweet_content">
-                            <div  class="d-flex justify-content-between"> 
-                                <p><%= User.find(p.user_id).full_name %></p>
+                            <div  class="d-flex justify-content-between">                             
+                                <p><%= link_to User.find(p.user_id).full_name, profile_path(id: p.user_id), class: 'text-dark' %></p>
                                 <p class="text-secondary"><%= p.created_at.to_formatted_s(:short) %></p>
                             </div> 
                             <p class="text-secondary"><%= p.content %></p>                        

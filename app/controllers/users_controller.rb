@@ -9,11 +9,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.photo ||= '/public/profile_image.jpg'
-    @user.cover_image ||= '/public/cover_image.jpg'
-    if @user.save
       session[:user_id] = @user.id
-      redirect_to home_path, notice: 'Welcome Successfuly Signed In.'
+      redirect_to home_path, notice: 'Welcome Successfully Created Account.'
     else
       render 'new'
     end

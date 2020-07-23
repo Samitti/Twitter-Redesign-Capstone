@@ -10,9 +10,9 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @posts = Post.all
     @new_post = Post.new
     @user = User.find(params[:id].nil? ? current_user.id : params[:id])
     @followers = @user.followers
+    @posts = @user.posts
   end
 end
