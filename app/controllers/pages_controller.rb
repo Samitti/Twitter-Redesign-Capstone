@@ -13,6 +13,6 @@ class PagesController < ApplicationController
     @new_post = Post.new
     @user = User.find(params[:id].nil? ? current_user.id : params[:id])
     @followers = @user.followers
-    @posts = @user.posts.includes(:likes).limit(10)
+    @posts = @user.posts.includes(:user, :likes).limit(10)
   end
 end

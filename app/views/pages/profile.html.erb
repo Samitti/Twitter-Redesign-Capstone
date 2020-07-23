@@ -1,10 +1,6 @@
 <div class="home-middle-content">
     <div class="banner">
-      <% if  @user.cover_image.attached? %>
-        <img src="<%= (url_for(@user.cover_image)) %>" class="cover_image">                       
-      <% else %>
-        <img src="cover_image.jpg" class="cover_image"> 
-      <% end %>  
+      <%= user_cover_image(@user.id) %>   
     </div>
     <div class="midle-nav">
     <%= render 'navbar_user' %>        
@@ -30,15 +26,11 @@
       <div class="card card-post">
           <div class="card-body d-flex">
               <div class="tweet_avatar mr-3"> 
-                  <% if  p.user.photo.attached? %>
-                      <img src="<%= (url_for(p.user.photo)) %>" class="profile_image">                       
-                  <% else %>
-                      <img src="avatar.jpg" class="profile_image"> 
-                  <% end %>                                         
+                  <%= user_avatar(p.user_id) %>                                                           
               </div> 
               <div class="tweet_content">
                   <div  class="d-flex justify-content-between"> 
-                      <p><%= p.user.full_name %></p>
+                      <p><%= User.find(p.user_id).full_name %></p>
                       <p class="text-secondary"><%= p.created_at.to_formatted_s(:short) %></p>
                   </div> 
                   <p class="text-secondary"><%= p.content %></p>
@@ -62,11 +54,7 @@
               <%= render 'components/follow_button' %>
           </div>
           <div>
-              <% if  @user.photo.attached? %>
-                  <img src="<%= (url_for(@user.photo)) %>" class="profile_image_large">                       
-              <% else %>
-                  <img src="avatar.jpg" class="profile_image_large"> 
-              <% end %>              
+              <%= user_profile_image(@user.id) %>                          
           </div> 
           <div class="round_follow_btn ">
               <%= render 'components/unfollow_button' %>
@@ -101,11 +89,7 @@
         <% for @follower in @followers do %>
             <div class="user_image_name d-flex pl-3 align-items-center justify-content-between">
                 <div>
-                  <% if  @follower.photo.attached? %>
-                      <img src="<%= (url_for(@follower.photo)) %>" class="profile_image">                       
-                  <% else %>
-                      <img src="avatar.jpg" class="profile_image"> 
-                  <% end %>  
+                  <%= user_avatar(@follower.id) %>  
                   <%= link_to @follower.full_name, profile_path(id: @follower.id), class: 'text-secondary' %> 
                 </div>
                 <div class="follower_follow">
