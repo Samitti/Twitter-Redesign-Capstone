@@ -5,6 +5,12 @@
  - You can follow any user, and the user can follow you.
  - You can upload a profile photo and cover photo, if not default is shown.
  
+ # Screenshot of Page
+
+![screenshot 1](login-page.png)
+![screenshot 2](home-page.png)
+![screenshot 3](profile-page.png)
+
 # Built With
 
 - RUBY
