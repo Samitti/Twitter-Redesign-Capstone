@@ -7,9 +7,9 @@
  
  # Screenshot of Page
 
-![screenshot 1](login-page.png)
-![screenshot 2](home-page.png)
-![screenshot 3](profile-page.png)
+![screenshot 1](public/login-page.png)
+![screenshot 2](public/home-page.png)
+![screenshot 3](public/profile-page.png)
 
 # Built With
 
