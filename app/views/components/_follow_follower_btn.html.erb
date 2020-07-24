@@ -1,8 +1,1 @@
-<% if current_user.id != @follower.id %>
-        <% if !current_user.following?(@follower) %>
-        <%= link_to '+', followings_path(id: @follower), method: :post, class: 'btn follow_button_add_sm' %>
-      <% else %>
-        <div class="follow_button_add_sm btn"> + </div>
-      <% end %>
-   
-<% end %>
+<div class="follow_button_add_sm btn"> + </div>

@@ -29,4 +29,35 @@ module PagesHelper
   def not_followings(user)
     render '/pages/not_followings' if current_user.id != user.id
   end
+
+  def follow_button(user)
+    if current_user.id != user.id 
+      if !current_user.following?(user) 
+        link_to '+', followings_path(id: @user), method: :post, class: 'btn follow_button_add'
+      else 
+        render 'components/follow_button'
+      end   
+    end
+  end
+
+  def follow_follower_btn(follower)
+    if current_user.id != follower.id
+      if !current_user.following?(@follower)
+        link_to '+', followings_path(id: @follower), method: :post, class: 'btn follow_button_add_sm'
+      else
+        render 'components/follow_follower_btn'
+      end    
+    end 
+  end
+
+  def unfollow_button(user)
+    if current_user.id != @user.id 
+      if !current_user.following?(@user)
+        render 'components/unfollow_button'
+      else
+        link_to '-', following_path(id: @user.id), method: :delete, class: 'btn follow_button_sub'
+      end
+    end
+  end
+
 end

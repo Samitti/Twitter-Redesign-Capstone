@@ -51,13 +51,13 @@
     <div class="profile_large_image d-flex flex-column align-items-center justify-content-center">
         <div class="d-flex align-items-center">
           <div class="round_follow_btn mr-2">
-              <%= render 'components/follow_button' %>
+              <%= follow_button(@user) %>
           </div>
           <div>
               <%= user_profile_image(@user.id) %>                          
           </div> 
           <div class="round_follow_btn ">
-              <%= render 'components/unfollow_button' %>
+              <%= unfollow_button(@user) %>
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
                   <%= link_to @follower.full_name, profile_path(id: @follower.id), class: 'text-secondary' %> 
                 </div>
                 <div class="follower_follow">
-                  <%= render 'components/follow_follower_btn' %> 
+                  <%= follow_follower_btn(@follower) %> 
                 </div>    
             </div>             
         <% end %>

@@ -1,8 +1,0 @@
-<% if !current_user.following?(u) %>
-  <% if user.photo.attached? %>
-    <img src="<%= (url_for(user.photo)) %>" class="profile_image">                       
-  <% else %>
-    <img src="avatar.jpg" class="profile_image"> 
-  <% end %>  
-  <%= link_to user.full_name, profile_path(id: user.id), class: 'text-secondary' %> 
-<% end %>

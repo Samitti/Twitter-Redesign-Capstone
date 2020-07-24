@@ -1,10 +1,2 @@
 
-<% if current_user.id != @user.id %>
-  <% if !current_user.following?(@user) %>
-    <div class="follow_button_sub btn"> - </div>
-  <% else %>
-    <%= link_to '-', following_path(id: @user.id), method: :delete, class: 'btn follow_button_sub' %>
-  <% end %>
-<% end %>
-
-
+<div class="follow_button_sub btn"> - </div>
