@@ -1,0 +1,31 @@
+<div class="signup_form text" >
+<h1 class="text"> Create Account </h1>
+<%= form_for @user do |f| %>
+  
+  <div class="field text">
+    <%= f.label :username %><br/>
+    <%= f.text_field :username, autofocus: true, autocomplete: "User name" %>
+  </div>
+  <div class="field text">
+    <%= f.label :full_name %><br/>
+    <%= f.text_field :full_name, autocomplete: "Full name" %>
+  </div>  
+  <div class="text">
+    <%= f.label :Profile_Image %><br/>
+    <%= f.file_field :photo %>
+  </div> 
+  <div class="text">
+    <%= f.label :Cover_Image %><br/>
+    <%= f.file_field :cover_image %>    
+  </div> 
+
+  <div class="actions">
+  <br/>
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+<div class="mt-2 text-danger">
+    <span class="notice"><%= notice %></span>
+    <span class="alert"><%= alert %></span>
+</div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container signin_form">   
+  <h1 class="text">Sign In</h1>
+
+  <%= form_for :session, url: sessions_path do |f| %>
+  <fieldset class="form-group text">
+    <p >
+      <%= f.label :username %></br>
+      <%= f.text_field :username, placeholder: 'Your username here', autofocus: true %>       
+    </p>
+
+    <p>
+      <%= f.submit "Sign In" %>
+    </p>
+  </fieldset>
+<% end %>
+
+<div class="text-danger">
+    <span class="notice"><%= notice %></span>
+    <span class="alert"><%= alert %></span>
+</div>
+</div>

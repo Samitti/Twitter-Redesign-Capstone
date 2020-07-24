@@ -1,0 +1,245 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #f7f7f8;
+}
+
+.layout {
+  display: flex;
+}
+
+.left-side-nav {
+  width: 15%;
+  background-color: #252b3b;
+}
+
+.right-side-nav {
+  width: 85%;
+}
+
+.top-navbar {
+  height: 70px;
+  background: #24a6da;
+}
+
+.banner {
+  height: 300px;
+  background-color: rgb(197, 197, 197);
+}
+
+.cover_image {
+  width: 100%;
+  height: 300px;
+}
+
+.home_container {
+  display: flex;
+}
+
+.home-middle-content {
+  width: 75%;
+  border-right: solid 1px rgb(224, 222, 222);
+}
+
+.home-right-content {
+  width: 25%;
+}
+
+h1 {
+  color: white;
+  font-weight: bold;
+}
+
+.container-index {
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+.text {
+  color: #24a6da;
+}
+
+.user_detail {
+  height: 130px;
+}
+
+.top-logo {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.top-logo i {
+  font-size: 30px;
+  color: white;
+}
+
+.social-links {
+  color: rgb(75, 73, 73);
+  font-size: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.social-links i {
+  margin-left: 50px;
+}
+
+.card-post {
+  border: none;
+}
+
+.midle-nav {
+  border-bottom: solid 1px rgb(224, 222, 222);
+}
+
+.user_image_name {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  height: 40px;
+}
+
+.profile_image {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.tweet_profile_mage {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.profile_image_large {
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.profile_large_image_name {
+  height: 174px;
+}
+
+.profile_large_image {
+  height: 230px;
+}
+
+.profile_numbers {
+  border: solid 1px rgb(224, 222, 222);
+  height: 70px;
+}
+
+.profile_numbers_item {
+  border-right: solid 1px rgb(224, 222, 222);
+  font-size: small;
+  margin-top: 10px;
+}
+
+.large-font {
+  font-size: large;
+  color: #f7f7f8;
+}
+
+.profile_numbers_item .large-font {
+  font-size: x-large;
+}
+
+.tweet_content {
+  width: 90%;
+}
+
+.followed_by {
+  height: 57px;
+  border-bottom: solid 1px rgb(224, 222, 222);
+}
+
+.round_follow_btn {
+  border-radius: 50%;
+}
+
+.follow_button_add {
+  font-size: xx-large;
+  border-radius: 50%;
+  color: rgb(185, 182, 182);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  border: solid 1px rgb(185, 182, 182);
+}
+
+.follow_button_sub {
+  font-size: xx-large;
+  border-radius: 50%;
+  color: rgb(185, 182, 182);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: solid 1px rgb(185, 182, 182);
+}
+
+.follow_button_add_sm {
+  font-size: 20px;
+  border-radius: 50%;
+  color: rgb(185, 182, 182);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: solid 1px rgb(185, 182, 182);
+}
+
+.follower_follow {
+  padding-left: 10;
+}
+
+.user_following,
+.user_followers {
+  border: solid 1px rgb(32, 32, 32);
+  font-size: small;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  width: 50%;
+}
+
+.nav-link-col {
+  color: #9b9b9b;
+}
+
+.side-nav a {
+  width: 167px;
+}
+
+.side-nav-last {
+  width: 200px;
+  padding-right: 10px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.who-to-follow {
+  height: 57px;
+  margin-left: 25px;
+  margin-right: 25px;
+  color: rgb(224, 222, 222);
+  border-bottom: solid 1px rgb(224, 222, 222);
+}
+
+.like_btn:hover {
+  text-decoration: none;
+}
+
+.nav-link-col:hover,
+.side-nav:hover {
+  background-color: #24a6da;
+  color: white;
+  text-decoration: none;
+}
