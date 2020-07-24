@@ -1,15 +1,15 @@
 <div class="container signin_form">
   <h1 class="text">Sign In</h1>
 
-<%= form_tag sessions_path do %>
+  <%= form_for :session, url: sessions_path do |f| %>
   <fieldset class="form-group text">
     <p >
-      <%= label_tag :username%></br>
-      <%= text_field_tag :username, nil, autofocus: true %>
+      <%= f.label :username %></br>
+      <%= f.text_field :username, placeholder: 'Your username here', autofocus: true %>       
     </p>
 
     <p>
-      <%= submit_tag "Sign In" %>
+      <%= f.submit "Sign In" %>
     </p>
   </fieldset>
 <% end %>
