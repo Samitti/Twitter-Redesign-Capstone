@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to home_path, notice: 'Welcome Successfully Created Account.'
     else
-      render 'new'
+      redirect_to request.referrer, alert: @user.errors.full_messages
     end
   end
 

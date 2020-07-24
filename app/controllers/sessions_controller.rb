@@ -13,9 +13,7 @@ class SessionsController < ApplicationController
       redirect_to home_path, notice:
       "Welcome #{params[:username]}, successfully Signed In!"
     else
-      flash.now[:danger] = 'Invalid Username'
-      render 'new', alert:
-      'User Name Invalid!'
+      redirect_to request.referrer, alert: 'Invalid Username'
     end
   end
 

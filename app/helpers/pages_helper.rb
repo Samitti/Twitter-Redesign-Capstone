@@ -30,13 +30,14 @@ module PagesHelper
     render '/pages/not_followings' if current_user.id != user.id
   end
 
+  # rubocop:disable Style/GuardClause
   def follow_button(user)
-    if current_user.id != user.id 
-      if !current_user.following?(user) 
+    if current_user.id != user.id
+      if !current_user.following?(user)
         link_to '+', followings_path(id: @user), method: :post, class: 'btn follow_button_add'
-      else 
+      else
         render 'components/follow_button'
-      end   
+      end
     end
   end
 
@@ -46,12 +47,12 @@ module PagesHelper
         link_to '+', followings_path(id: @follower), method: :post, class: 'btn follow_button_add_sm'
       else
         render 'components/follow_follower_btn'
-      end    
-    end 
+      end
+    end
   end
 
-  def unfollow_button(user)
-    if current_user.id != @user.id 
+  def unfollow_button(_user)
+    if current_user.id != @user.id
       if !current_user.following?(@user)
         render 'components/unfollow_button'
       else
@@ -59,5 +60,5 @@ module PagesHelper
       end
     end
   end
-
+  # rubocop:enable Style/GuardClause
 end
