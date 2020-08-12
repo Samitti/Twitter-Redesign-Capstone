@@ -59,7 +59,7 @@ To get a local copy up and running follow these simple example steps.
  
 - Github: [@githubhandle](https://github.com/Samitti)
 - Twitter: [@twitterhandle](https://twitter.com/Samuel63734232)
-- Linkedin: [linkedin](www.linkedin.com/in/samuelghebremeskel)
+- Linkedin: [linkedin](https://www.linkedin.com/in/samuelghebremeskel/)
  
 ## 🤝 Contributing
  
